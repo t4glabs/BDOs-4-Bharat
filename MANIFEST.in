@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bdo_app *.css
+recursive-include bdo_app *.csv
+recursive-include bdo_app *.html
+recursive-include bdo_app *.ico
+recursive-include bdo_app *.js
+recursive-include bdo_app *.json
+recursive-include bdo_app *.md
+recursive-include bdo_app *.png
+recursive-include bdo_app *.py
+recursive-include bdo_app *.svg
+recursive-include bdo_app *.txt
+recursive-exclude bdo_app *.pyc
