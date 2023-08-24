@@ -1,26 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:mail",
  "creation": "2023-07-27 21:47:04.008222",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "photo",
+  "mail",
+  "section_break_rqotr",
   "bdo_name",
+  "email",
+  "column_break_yqnjd",
+  "phone",
+  "contact",
   "designation",
+  "photo",
   "column_break_vbo4w",
   "state",
-  "district",
-  "block_name",
-  "section_break_rl01w",
-  "job_theme",
-  "type_of_collaboration",
-  "social_workers"
+  "district"
  ],
  "fields": [
   {
+   "fetch_from": "email.full_name",
    "fieldname": "bdo_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -35,55 +38,65 @@
   {
    "fieldname": "designation",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Designation"
   },
   {
-   "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State"
-  },
-  {
    "fieldname": "district",
-   "fieldtype": "Data",
-   "label": "District"
-  },
-  {
-   "fieldname": "block_name",
-   "fieldtype": "Data",
-   "label": "Block Name"
-  },
-  {
-   "fieldname": "job_theme",
-   "fieldtype": "Select",
-   "label": "Job Theme",
-   "options": "Housing\nWater and Sanitation\nPensions\nMGNREGS\nRoads and Connectivity\nEducation\nHealth Care\nOther / None of the above"
-  },
-  {
-   "fieldname": "type_of_collaboration",
-   "fieldtype": "Data",
-   "label": "Type of collaboration"
-  },
-  {
-   "fieldname": "social_workers",
    "fieldtype": "Link",
-   "label": "Social Workers",
-   "options": "Social Worker"
+   "label": "District",
+   "options": "District"
   },
   {
    "fieldname": "column_break_vbo4w",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_rl01w",
+   "fieldname": "email",
+   "fieldtype": "Link",
+   "label": "Email",
+   "no_copy": 1,
+   "options": "User",
+   "unique": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "contact",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yqnjd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "email.email",
+   "fieldname": "mail",
+   "fieldtype": "Data",
+   "label": "Mail",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_rqotr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "district.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-27 22:10:15.535946",
+ "modified": "2023-08-24 01:14:05.570205",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Block Official",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

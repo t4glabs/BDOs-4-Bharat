@@ -15,8 +15,8 @@ app_license = "MIT"
 # app_include_js = "/assets/bdo_app/js/bdo_app.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/bdo_app/css/bdo_app.css"
-# web_include_js = "/assets/bdo_app/js/bdo_app.js"
+web_include_css = "/assets/bdo_app/css/bdo_app.css"
+web_include_js = "/assets/bdo_app/js/bdo_app.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "bdo_app/public/scss/website"
@@ -45,6 +45,13 @@ app_license = "MIT"
 #	"Role": "home_page"
 # }
 
+# website_route_rules = [
+#     {'from':'/collaborate?help=<event>', 'to':'registration-quiz'},
+#     {'from':'/submit-reg-quiz?event=<event>', 'to':'submit-reg-quiz'}
+# ]
+website_route_rules = [
+    {'from':'/collaborate?theme=<theme>', 'to':'collaborate'}
+]
 # Generators
 # ----------
 
@@ -117,6 +124,11 @@ app_license = "MIT"
 # Document Events
 # ---------------
 # Hook on document methods and events
+doc_events = {
+	"Block Official": {
+		"after_insert": "bdo_app.bdos_4_bharath.bdo_creation.on_user_signup"
+	}
+}
 
 # doc_events = {
 #	"*": {
@@ -215,3 +227,13 @@ app_license = "MIT"
 # auth_hooks = [
 #	"bdo_app.auth.validate"
 # ]
+
+portal_menu_items = [ 
+    {"title": "Collaborate", "route": "/collaborate", "role": "Block Official"},
+    {"title": "My Profile", "route": "/block-official/new", "role": "Block Official"},
+]  
+
+website_route_rules = [
+    {"from_route": "/event-portal/<name>", "to_route": "event-portal"},
+]
+

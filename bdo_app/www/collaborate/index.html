@@ -1,0 +1,81 @@
+{% extends "templates/base.html" %}
+{% block title %}
+    Collaboration
+{% endblock %}
+
+
+{% block content %}
+
+<section style="max-width: 80%; display: block; margin-left: auto; margin-right: auto">
+    <h1>Collaborate with social workers</h1>
+    <form class="request_info row" style="max-width: 80%;">
+        <!-- Fields for users to enter their name, email, and phone -->
+        <div class="form-group col-md-6">
+            <label for="job-theme">{{ _("Job Theme") }}</label>
+            <!-- <input type="text" class="form-control" id="job-theme" name="job_theme" required> -->
+            <select class="form-control" name="job-theme" id="job-theme" required>
+                <option data_name="" value=""> </option>
+                {% for theme in themes %}
+                <option data_name="{{theme.name}}" value="{{theme.name}}">{{theme.job_theme}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="collaborations">{{ _("Collaboration") }}</label>
+            <!-- <input type="text" class="form-control" id="collaborations" name="collaborations" required> -->
+            <select class="form-control" name="collaborations" id="collaborations" required>
+                <option data_name="" value=""> </option>
+                {% for help in collabs %}
+                <option data_name="{{help.name}}" value="{{help.name}}">{{help.collaboration}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn submit-btn"> Search </button>
+    </form>
+    <!-- <button class="show-details"> Submit </button> -->
+    
+    
+    <!-- FORM -->
+
+    <!-- FORM -->
+    
+    {% if result %}
+    <div>
+        <h3>Social workers who matches your requirements</h3>
+        {% for x in result %}
+        <div class="row p-4 border">
+            
+            <img {% if x.photo %} src="{{x.photo}}" {% else %} src="/files/user.png" {% endif %} width="100px" class="col-2 mb-4 mr-lg-4 mb-lg-0 rounded-circle" >   
+           
+            <div class="col-md-8">
+                <h3>{{x.name1}}</h3>
+                <p> {{x.years_of_experience}} Years of Experience</p>      
+                {% if x.show_contact %}
+                <p>{{x.email}}</p>
+                {% endif %}        
+            </div>     
+            <div class="col-12 mt-4">
+                <button class="btn">Notify Volunteer</button>
+            </div> 
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    {% elif no_result %}
+
+    <h4>Sorry, we couldn't find volunteers who matches your requirements</h4>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}
+
+{%- block script %}
+    {{ super() }}
+    {{ include_script('controls.bundle.js') }}
+    <script src="https://kit.fontawesome.com/cfe0cd2f67.js" crossorigin="anonymous"></script>
+{% endblock %}
+

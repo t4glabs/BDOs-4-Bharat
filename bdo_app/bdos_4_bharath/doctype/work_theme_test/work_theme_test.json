@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-13 00:41:35.309656",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_theme"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_theme",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Theme",
+   "options": "Job Theme"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-08-13 01:06:49.147109",
+ "modified_by": "Administrator",
+ "module": "BDOs 4 Bharath",
+ "name": "Work Theme Test",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

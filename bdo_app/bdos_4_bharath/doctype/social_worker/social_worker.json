@@ -7,12 +7,22 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "photo",
   "name1",
-  "years_of_experience",
-  "column_break_ppjy7",
   "state",
-  "district"
+  "column_break_ppjy7",
+  "photo",
+  "district",
+  "contact",
+  "email",
+  "show_contact",
+  "column_break_vxc2i",
+  "phone_no",
+  "column_break_tywu2",
+  "social_work_section",
+  "job_themes",
+  "years_of_experience",
+  "column_break_o674i",
+  "collaboration_help"
  ],
  "fields": [
   {
@@ -23,31 +33,98 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "years_of_experience",
-   "fieldtype": "Data",
-   "label": "Years of experience"
+   "fieldtype": "Int",
+   "label": "Years of experience",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_ppjy7",
    "fieldtype": "Column Break"
   },
   {
+   "fetch_from": "district.state",
    "fieldname": "state",
    "fieldtype": "Data",
-   "label": "State"
+   "in_list_view": 1,
+   "label": "State",
+   "reqd": 1
   },
   {
    "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "District",
+   "options": "District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email",
+   "no_copy": 1,
+   "options": "User",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "email.mobile_no",
+   "fetch_if_empty": 1,
+   "fieldname": "phone_no",
    "fieldtype": "Data",
-   "label": "District"
+   "label": "Phone No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "social_work_section",
+   "fieldtype": "Section Break",
+   "label": "Social Work"
+  },
+  {
+   "fieldname": "column_break_o674i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "collaboration_help",
+   "fieldtype": "Table",
+   "label": "Collaboration Helps",
+   "options": "Select Collaboration"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_vxc2i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tywu2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_contact",
+   "fieldtype": "Check",
+   "label": "Show contact details to BDOs"
+  },
+  {
+   "fieldname": "job_themes",
+   "fieldtype": "Table",
+   "label": "Job Themes",
+   "options": "Work Theme Test"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-27 22:08:53.136202",
+ "modified": "2023-08-24 02:05:20.309262",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Social Worker",

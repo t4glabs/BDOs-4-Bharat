@@ -1,0 +1,17 @@
+{% extends "templates/base.html" %}
+{% block title %}
+    Collaboration
+{% endblock %}
+
+
+{% block content %}
+<section style="max-width: 80%; display: block; margin-left: auto; margin-right: auto">
+    <h1>Hi, how are you</h1>
+</section>
+
+{% endblock %}
+
+{%- block script %}
+    {{ super() }}
+    {{ include_script('controls.bundle.js') }}
+{% endblock %}
