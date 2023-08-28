@@ -51,7 +51,7 @@ frappe.ready(()=>{
                     });
                     setTimeout(() => {
                         let url = window.location.href,
-                            base_url = url.split('?')[0]
+                            base_url = url.split('?')[0] 
                     
                         window.location.href = base_url
                     }, 3000);

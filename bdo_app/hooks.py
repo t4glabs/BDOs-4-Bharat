@@ -234,6 +234,7 @@ doc_events = {
 
 portal_menu_items = [ 
     {"title": "Collaborate", "route": "/collaborate", "role": "Block Official"},
+    {"title": "Requests", "route": "/requests", "role": "All"},
     {"title": "My Profile", "route": "/block-official/new", "role": "Block Official"},
     {"title": "My Profile", "route": "/volunteer/new", "role": "Social Worker"}
 ]  
