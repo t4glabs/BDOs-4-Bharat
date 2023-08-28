@@ -2,7 +2,6 @@ import frappe
 from frappe import get_doc
 import random
 
-
 def on_user_signup(doc, method):
     user = doc.email
 

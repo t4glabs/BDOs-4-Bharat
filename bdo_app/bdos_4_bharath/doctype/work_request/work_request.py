@@ -20,3 +20,8 @@ class WorkRequest(WebsiteGenerator):
 		context.no_cache = 1
 
 		return context
+
+@frappe.whitelist(allow_guest=True)
+def insert_doc(bdo, sw, theme):
+    
+    print(f'\n\n\n hrloo {bdo}\n{sw}\n {theme}  \n\n\n')

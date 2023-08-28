@@ -8,7 +8,7 @@ default = ['', '']
 
 
 def get_context(context):
-    context.docs = docs or []
+
     context.no_result = False
     if frappe.form_dict:
         
@@ -56,8 +56,7 @@ def get_volunteers(theme, collaboration):
         """,
         (theme, collaboration)
     )
-    print(f'\n\n\n sw:{social_workers} \n\n\n')
-    # return social_workers
+    
 
     # place of bdo
     district = frappe.db.get_value('Block Official', frappe.session.user, 'district')
@@ -67,11 +66,11 @@ def get_volunteers(theme, collaboration):
 			'Social Worker',
 			filters = {
 				'name': ['in', social_workers],
-                'district': district
+                # 'district': district
 			},
-			fields = ['name1', 'email', 'photo', 'years_of_experience', 'show_contact']
+			fields = ['name','name1', 'email', 'photo', 'years_of_experience', 'show_contact']
     	)
-        
+
     return docs
 
 
