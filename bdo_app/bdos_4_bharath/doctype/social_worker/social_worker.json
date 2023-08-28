@@ -1,12 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:mail",
  "creation": "2023-07-27 22:08:53.136202",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "mail",
+  "section_break_plohr",
   "name1",
   "state",
   "column_break_ppjy7",
@@ -120,14 +123,26 @@
    "fieldtype": "Table",
    "label": "Job Themes",
    "options": "Work Theme Test"
+  },
+  {
+   "fetch_from": "email.email",
+   "fieldname": "mail",
+   "fieldtype": "Data",
+   "label": "mail",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_plohr",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-24 02:05:20.309262",
+ "modified": "2023-08-25 03:15:48.047163",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Social Worker",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

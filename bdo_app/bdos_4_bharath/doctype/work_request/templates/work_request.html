@@ -1,0 +1,23 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1> Collab Details </h1>
+
+<h4>Job Theme</h4>
+
+<div>
+    <h6>Job Theme : {{theme}} </h6>
+    <h6>Collaboration Help : {{collab}} </h6>
+</div>
+
+
+{% endblock %}
+
+{%- block script %}
+    {{ super() }}
+    {{ include_script('controls.bundle.js') }}
+{% endblock %}
+
+
+<!-- this is a sample default web page template -->
+

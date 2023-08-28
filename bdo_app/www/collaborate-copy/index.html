@@ -1,6 +1,6 @@
 {% extends "templates/web.html" %}
 
-{% block title %}{{ _("Collaboration") }}{% endblock %}
+{% block title %}{{ _("Collaboration Copy") }}{% endblock %}
 
 {% block page_content %}
 
@@ -35,6 +35,9 @@
     </form>
     <!-- <button class="show-details"> Submit </button> -->
     
+    
+    <!-- FORM -->
+
     <!-- FORM -->
     
     {% if result %}
@@ -71,9 +74,12 @@
 {% endblock %}
 
 {%- block script %}
-    {{ super() }}
-    {{ include_script('controls.bundle.js') }}
+    <!-- {{ super() }}
+    {{ include_script('controls.bundle.js') }} -->
 {% endblock %}
+
+
+
 
 
 

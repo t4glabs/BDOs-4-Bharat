@@ -15,6 +15,7 @@ app_license = "MIT"
 # app_include_js = "/assets/bdo_app/js/bdo_app.js"
 
 # include js, css files in header of web template
+# web_include_css = "/assets/bdo_app/css/bdo_app.css"
 web_include_css = "/assets/bdo_app/css/bdo_app.css"
 web_include_js = "/assets/bdo_app/js/bdo_app.js"
 
@@ -127,6 +128,9 @@ website_route_rules = [
 doc_events = {
 	"Block Official": {
 		"after_insert": "bdo_app.bdos_4_bharath.bdo_creation.on_user_signup"
+	},
+    "Social Worker": {
+		"after_insert": "bdo_app.bdos_4_bharath.sw_creation.on_user_signup"
 	}
 }
 
@@ -231,6 +235,7 @@ doc_events = {
 portal_menu_items = [ 
     {"title": "Collaborate", "route": "/collaborate", "role": "Block Official"},
     {"title": "My Profile", "route": "/block-official/new", "role": "Block Official"},
+    {"title": "My Profile", "route": "/volunteer/new", "role": "Social Worker"}
 ]  
 
 website_route_rules = [

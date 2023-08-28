@@ -11,20 +11,26 @@
   "collaboration",
   "status",
   "block_official",
-  "social"
+  "social",
+  "route",
+  "publish"
  ],
  "fields": [
   {
    "fieldname": "job_theme",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Job Theme",
-   "options": "Job Theme"
+   "options": "Job Theme",
+   "reqd": 1
   },
   {
    "fieldname": "collaboration",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Collaboration",
-   "options": "Collaboration"
+   "options": "Collaboration",
+   "reqd": 1
   },
   {
    "fieldname": "status",
@@ -43,11 +49,24 @@
    "fieldtype": "Link",
    "label": "Block Official",
    "options": "Block Official"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "1",
+   "fieldname": "publish",
+   "fieldtype": "Check",
+   "label": "Publish"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "publish",
  "links": [],
- "modified": "2023-08-13 00:19:50.982533",
+ "modified": "2023-08-26 01:38:53.696099",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Work Request",
