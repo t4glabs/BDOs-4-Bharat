@@ -11,5 +11,13 @@ def on_user_signup(doc, method):
         'role': 'Social Worker'
     })
     user_doc.save(ignore_permissions=True)
+
+    permission = get_doc({
+        "doctype": "User Permission",
+        "user": user,
+        "allow": 'Social Worker',
+        "for_value": user
+    })
+    permission.save(ignore_permissions=True)
     frappe.db.commit()
 

@@ -10,6 +10,14 @@ def on_user_signup(doc, method):
         'role': 'Block Official'
     })
     user_doc.save(ignore_permissions=True)
+
+    permission = get_doc({
+            "doctype": "User Permission",
+            "user": user,
+            "allow": 'Block Official',
+            "for_value": user
+        })
+    permission.save(ignore_permissions=True)
     frappe.db.commit()
 
     # if not frappe.db.exists("Block Official", {"email": user}):

@@ -34,6 +34,8 @@
    "label": "Photo"
   },
   {
+   "fetch_from": "email.full_name",
+   "fetch_if_empty": 1,
    "fieldname": "name1",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -138,7 +140,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-25 03:15:48.047163",
+ "modified": "2023-09-02 00:37:57.421789",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Social Worker",

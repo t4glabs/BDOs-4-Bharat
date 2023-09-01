@@ -68,7 +68,7 @@ frappe.ready(()=>{
 
 // 'bdo_app.www.index.get_volunteers'
 // 'bdo_app.services.rest.get_volunteers'
-s
+
 
 
 

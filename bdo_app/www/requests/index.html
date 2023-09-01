@@ -6,6 +6,14 @@
 
 <section style="max-width: 80%; display: block; margin-left: auto; margin-right: auto">
     <h1>Collaboration requests</h1>
+
+    {% for req in reqs %}
+    <div class="request">
+        Request made on {{req.creation.strftime("%d/%m/%Y")}}
+        <a href="{{frappe.utils.get_url()}}/{{req.name}}">View more details</a>
+    </div>
+    {% endfor %}
+
 </section>
 
 {% endblock %}

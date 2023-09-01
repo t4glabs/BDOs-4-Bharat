@@ -6,12 +6,10 @@ docs = []
 params = []
 default = ['', '']
 
-
 def get_context(context):
 
     context.no_result = False
-    if frappe.form_dict:
-        
+    if frappe.form_dict:       
         theme = frappe.form_dict["theme"]
         params = theme.split('-')
         try:          
