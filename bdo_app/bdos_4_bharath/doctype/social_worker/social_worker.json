@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:mail",
  "creation": "2023-07-27 22:08:53.136202",
@@ -130,6 +131,7 @@
    "fetch_from": "email.email",
    "fieldname": "mail",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "mail",
    "unique": 1
   },
@@ -140,7 +142,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-02 00:37:57.421789",
+ "modified": "2023-09-13 04:03:36.067722",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Social Worker",

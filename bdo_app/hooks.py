@@ -16,8 +16,8 @@ app_license = "MIT"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/bdo_app/css/bdo_app.css"
-web_include_css = "/assets/bdo_app/css/bdo_app.css"
-web_include_js = "/assets/bdo_app/js/bdo_app.js"
+# web_include_css = "/assets/bdo_app/css/bdo_app.css"
+# web_include_js = "/assets/bdo_app/js/bdo_app.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "bdo_app/public/scss/website"
