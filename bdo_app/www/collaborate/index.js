@@ -1,5 +1,4 @@
 frappe.ready(()=>{
-    console.log('helloo')
 
     let a = document.querySelector('.submit-btn')
 

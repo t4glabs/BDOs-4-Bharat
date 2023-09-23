@@ -16,7 +16,8 @@ class WorkRequest(WebsiteGenerator):
 			self.route = f"{self.name}"
 
 	def get_context(self, context):
-		context.theme = frappe.db.get_value('Job Theme', self.job_theme , 'job_theme')
+		# context.theme_url = "sss"
+		context.j_theme = frappe.db.get_value('Job Theme', self.job_theme , 'job_theme')
 		context.collab = frappe.db.get_value('Collaboration', self.collaboration, 
 		'collaboration')
 		context.sw = frappe.db.get_value('Social Worker', self.social, 'name1')

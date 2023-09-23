@@ -9,19 +9,17 @@ default = ['', '']
 def get_context(context):
 
     context.no_result = False
-    if frappe.form_dict:       
-        theme = frappe.form_dict["theme"]
-        params = theme.split('-')
+    if frappe.form_dict["theme"]:       
+        j_theme = frappe.form_dict["theme"]
+        params = j_theme.split('-')
         try:          
            result = get_volunteers(params[0], params[1])
            context.result = result
            if len(result) == 0:
                context.no_result = True
                
-
         except Exception as e:
-            print(f'\n\n\n error:- {e} \n\n\n')
-            # frappe.throw(('An error occurred while fetching volunteer details'))
+            frappe.throw(('An error occurred while fetching volunteer details'))
 
     # get themes and collaboration lists
     context.collabs = frappe.db.get_list(
@@ -41,7 +39,7 @@ def get_context(context):
 
 
 @frappe.whitelist(allow_guest=True)
-def get_volunteers(theme, collaboration):
+def get_volunteers(j_theme, collaboration):
     docs= []
     social_workers = frappe.db.sql_list(
         """
@@ -52,7 +50,7 @@ def get_volunteers(theme, collaboration):
         AND t1.job_theme = %s
         AND t2.collaboration = %s
         """,
-        (theme, collaboration)
+        (j_theme, collaboration)
     )
     
 

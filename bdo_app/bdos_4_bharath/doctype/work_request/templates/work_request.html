@@ -8,7 +8,7 @@
 <div>
 
     <h5>Social Worker: {{ sw }}</h5>
-    <h5>Job Theme : {{theme}} </h5>
+    <h5>Job Theme : {{j_theme}} </h5>
     <h5>Collaboration Help : {{collab}} </h5>
     <h5>Status: {{status}}</h5>
     <button><a href="{{frappe.utils.get_url()}}/request-work/{{name}}/edit">Update Request Status</a></button>
@@ -17,10 +17,6 @@
 
 {% endblock %}
 
-{%- block script %}
-    {{ super() }}
-    {{ include_script('controls.bundle.js') }}
-{% endblock %}
 
 
 <!-- this is a sample default web page template -->
