@@ -14,7 +14,7 @@ frappe.ready(()=>{
 
         let url = window.location.href,
             base_url = url.split('?')[0],
-            redirect = `${base_url}?theme=${details[0]}-${details[1]}`
+            redirect = `${base_url}?collab=${details[0]}-${details[1]}`
         
         window.location.href = redirect
         
@@ -30,7 +30,7 @@ frappe.ready(()=>{
             const queryParams = new URLSearchParams(window.location.search);
 
             // Get the value of the 'theme' parameter
-            const themeValue = queryParams.get('theme');
+            const themeValue = queryParams.get('collab');
 
 
             frappe.call({
@@ -39,7 +39,7 @@ frappe.ready(()=>{
                 args: {
                     bdo: frappe.session.user,
                     sw: sw,
-                    theme: themeValue
+                    collab: themeValue
                 },
                 callback: (data) => {
                         console.log('done')

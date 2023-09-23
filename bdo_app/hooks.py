@@ -51,7 +51,7 @@ app_license = "MIT"
 #     {'from':'/submit-reg-quiz?event=<event>', 'to':'submit-reg-quiz'}
 # ]
 website_route_rules = [
-    {'from':'/collaborate?theme=<theme>', 'to':'collaborate'}
+    {'from':'/collaborate?collab=<collab>', 'to':'collaborate'}
 ]
 # Generators
 # ----------

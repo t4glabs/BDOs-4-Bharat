@@ -9,8 +9,8 @@ default = ['', '']
 def get_context(context):
 
     context.no_result = False
-    if frappe.form_dict["theme"]:       
-        j_theme = frappe.form_dict["theme"]
+    if frappe.form_dict:       
+        j_theme = frappe.form_dict["collab"]
         params = j_theme.split('-')
         try:          
            result = get_volunteers(params[0], params[1])
