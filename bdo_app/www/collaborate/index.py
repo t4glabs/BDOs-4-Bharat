@@ -16,8 +16,7 @@ def get_context(context):
            result = get_volunteers(params[0], params[1])
            context.result = result
            if len(result) == 0:
-               context.no_result = True
-               
+               context.no_result = True 
         except Exception as e:
             frappe.throw(('An error occurred while fetching volunteer details'))
 

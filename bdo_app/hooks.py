@@ -201,6 +201,13 @@ doc_events = {
 # before_job = ["bdo_app.utils.before_job"]
 # after_job = ["bdo_app.utils.after_job"]
 
+role_home_page = {
+    "Block Official": "collaborate",
+    "Social Worker": "requests",
+    "Administrator": "desk"
+}
+
+
 # User Data Protection
 # --------------------
 
