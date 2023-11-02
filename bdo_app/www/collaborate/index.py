@@ -61,6 +61,7 @@ def get_volunteers(j_theme, collaboration):
 			'Social Worker',
 			filters = {
 				'name': ['in', social_workers],
+                'state': 'Jharkhand'
                 # 'district': district
 			},
 			fields = ['name','name1', 'email', 'photo', 'years_of_experience', 'show_contact']

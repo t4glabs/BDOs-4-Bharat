@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2023-08-12 02:15:57.513195",
  "default_view": "List",
@@ -18,7 +19,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-08-25 00:56:27.621907",
+ "modified": "2023-10-13 20:21:40.167865",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Collaboration",

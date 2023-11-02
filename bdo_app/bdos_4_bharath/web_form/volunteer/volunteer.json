@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2023-09-02 01:10:49.651606",
+ "modified": "2023-11-02 17:25:11.783319",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "volunteer",
@@ -45,12 +45,12 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "district",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "hidden": 0,
    "label": "District",
    "max_length": 0,
    "max_value": 0,
-   "options": "District",
+   "options": "",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
@@ -160,7 +160,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "years_of_experience",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "hidden": 0,
    "label": "Years of experience",
    "max_length": 0,
@@ -191,6 +191,16 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Select Collaboration",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldtype": "Attach",
+   "hidden": 0,
+   "max_length": 0,
+   "max_value": 0,
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0

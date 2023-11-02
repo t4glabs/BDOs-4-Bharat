@@ -44,9 +44,8 @@
   },
   {
    "fieldname": "district",
-   "fieldtype": "Link",
-   "label": "District",
-   "options": "District"
+   "fieldtype": "Data",
+   "label": "District"
   },
   {
    "fieldname": "column_break_vbo4w",
@@ -94,7 +93,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-13 04:03:54.057002",
+ "modified": "2023-11-02 17:20:05.865870",
  "modified_by": "Administrator",
  "module": "BDOs 4 Bharath",
  "name": "Block Official",
