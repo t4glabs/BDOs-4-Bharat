@@ -25,8 +25,8 @@ class WorkRequest(WebsiteGenerator):
 		return context
 
 @frappe.whitelist(allow_guest=True)
-def insert_doc(bdo, sw, theme):
-	params = theme.split('-')
+def insert_doc(bdo, sw, collab):
+	params = collab.split('-')
 	req = get_doc({
 		'doctype': 'Work Request',
 		'block_official': bdo,
